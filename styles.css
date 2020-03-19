@@ -1,7 +1,24 @@
-div {
+.frog {
+  position: absolute;
+  top: calc(100vh - 200px);
+  left: calc(50vw - 75px);
+}
+
+.frog__head {
   background-color: teal;
   width: 100px;
   height: 100px;
+  border: 5px solid gray;
+  border-radius: 50px;
+  margin-left: 25px;
+}
+
+.frog__body {
+  background-color: teal;
+  width: 150px;
+  height: 140px;
   border: 5px solid yellow;
-  border-radius:50px;
+  border-radius: 75px;
+  position: relative;
+  top: -35px;
 }
