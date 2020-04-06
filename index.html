@@ -7,6 +7,9 @@
     <title>
       Risky Ribbit Road- A fun Frogger-clone by Jemircal.
     </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="A fun Frogger-clone, because Jeff, Miriam, and Caleb are stuck at home."/>
 
     <meta name="author" content="Jemircal"/>
@@ -16,10 +19,23 @@
   </head>
 
   <body>
-    <script src="js/scripts.js"></script>
-    <div class="frog">
+    <a-car pic="cars/car1.jpg">
+    </a-car>
+
+    <a-car pic="cars/car2.jpg">
+    </a-car>
+
+    <div class="frog" the-frog>
       <div class="frog__head"></div>
       <div class="frog__body"></div>
     </div>
+
+    <script type="module" src="scripts/car.js"></script>
+    <script type="module">
+      import {Frog} from './scripts/frog.js';
+      // import {Car} from './scripts/car.js';
+      let myCaleb = new Frog("Princess Cordelia");
+      // let myLittleCaleb = new Car(" PS4 guy");
+    </script>
   </body>
 </html>
