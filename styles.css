@@ -22,3 +22,14 @@
   position: relative;
   top: -35px;
 }
+
+a-car {
+  position: absolute;
+  background-color: red;
+  width: 130px;
+  height: 75px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-size: cover;
+}
