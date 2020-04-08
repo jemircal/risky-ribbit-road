@@ -8,8 +8,7 @@ export class Car extends HTMLElement {
   connectedCallback() {
     console.log('I am added to the page!', this.getAttribute('pic'));
     this.style.backgroundImage = `url(${this.getAttribute('pic')})`;
-    console.log(this.style.backgroundImage);
-
+    this.style.left = this.getAttribute('space');
     setInterval(this.move.bind(this), 500);
   }
 
