@@ -19,17 +19,38 @@
   </head>
 
   <body>
-    <a-car pic="cars/car1.jpg">
-    </a-car>
+    <a-lane>
+      <a-car pic="cars/car2.jpg" space="200px">
+      </a-car>
+    </a-lane>
+    
+    <a-lane>
+      <a-car pic="cars/car1.jpg" space="400px">
+      </a-car>
 
-    <a-car pic="cars/car2.jpg">
-    </a-car>
+      <a-car pic="cars/car2.jpg" space="60px">
+      </a-car>
+    </a-lane>
+
+    <a-lane>
+      <a-car pic="cars/car2.jpg" space="600px">
+      </a-car>
+
+      <a-car pic="cars/car1.jpg" space="200px">
+      </a-car>
+    </a-lane>
+
+    <a-lane>
+      <a-car pic="cars/car2.jpg" space="20px">
+      </a-car>
+    </a-lane>
 
     <div class="frog" the-frog>
       <div class="frog__head"></div>
       <div class="frog__body"></div>
     </div>
 
+    <script type="module" src="scripts/lane.js"></script>
     <script type="module" src="scripts/car.js"></script>
     <script type="module">
       import {Frog} from './scripts/frog.js';
