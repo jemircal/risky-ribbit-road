@@ -1,28 +1,28 @@
-export class Frog {
+export class Frog  extends HTMLElement {
   constructor(name) {
+    super();
     console.log(`I am a frog named ${name}`);
-    this.frogBody = document.querySelector('[the-frog]');
-
     document.body.addEventListener('keydown', this.keyListener.bind(this));
+    this.deadSound = new Audio('deadsound.mp3');
   }
 
   keyListener(evt) {
     let x, y;
 
     if (evt.keyCode === 39) { //left
-      x = this.frogBody.offsetWidth;
+      x = this.offsetWidth;
       y = 0;
     }
     if (evt.keyCode === 40) { //up
       x = 0;
-      y = this.frogBody.offsetHeight;
+      y = this.offsetHeight;
     }
     if (evt.keyCode === 38) { //down
       x = 0;
-      y = this.frogBody.offsetHeight*-1;
+      y = this.offsetHeight*-1;
     }
     if (evt.keyCode === 37) { //right
-      x = this.frogBody.offsetWidth*-1;
+      x = this.offsetWidth*-1;
       y = 0;
     }
 
@@ -31,9 +31,15 @@ export class Frog {
 
   move(x, y) {
     console.log('Move you frog!', x, y);
-    this.frogBody.style.top = `${this.frogBody.offsetTop + y}px`;
-    this.frogBody.style.left = `${this.frogBody.offsetLeft + x}px`;
+    this.style.top = `${this.offsetTop + y}px`;
+    this.style.left = `${this.offsetLeft + x}px`;
   }
 
-
+  dead() {
+    this.deadSound.load();
+    this.deadSound.play();
+    console.log('I died');
+  }
 }
+
+window.customElements.define('a-frog', Frog);

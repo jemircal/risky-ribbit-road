@@ -19,12 +19,12 @@
   </head>
 
   <body>
-    <a-lane>
+    <a-lane speed="550" direction="">
       <a-car pic="cars/car2.jpg" space="200px">
       </a-car>
     </a-lane>
-    
-    <a-lane>
+
+    <a-lane speed="220" direction="">
       <a-car pic="cars/car1.jpg" space="400px">
       </a-car>
 
@@ -32,7 +32,7 @@
       </a-car>
     </a-lane>
 
-    <a-lane>
+    <a-lane speed="400" direction="">
       <a-car pic="cars/car2.jpg" space="600px">
       </a-car>
 
@@ -40,23 +40,18 @@
       </a-car>
     </a-lane>
 
-    <a-lane>
+    <a-lane speed="200" direction="">
       <a-car pic="cars/car2.jpg" space="20px">
       </a-car>
     </a-lane>
 
-    <div class="frog" the-frog>
+    <a-frog>
       <div class="frog__head"></div>
       <div class="frog__body"></div>
-    </div>
+    </a-frog>
 
-    <script type="module" src="scripts/lane.js"></script>
     <script type="module" src="scripts/car.js"></script>
-    <script type="module">
-      import {Frog} from './scripts/frog.js';
-      // import {Car} from './scripts/car.js';
-      let myCaleb = new Frog("Princess Cordelia");
-      // let myLittleCaleb = new Car(" PS4 guy");
-    </script>
+    <script type="module" src="scripts/lane.js"></script>
+    <script type="module" src="scripts/frog.js"></script>
   </body>
 </html>
