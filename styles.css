@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.frog {
+a-frog {
   position: absolute;
   top: calc(100vh - 200px);
   left: calc(50vw - 75px);
