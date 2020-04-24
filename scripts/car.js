@@ -24,7 +24,7 @@ export class Car extends HTMLElement {
   }
 
   moveOk() {
-    if (isOverlapping(this, this.frog)) {
+    if (isOverlapping(this, this.frog, -(this.frog.querySelector('.frog__body').style.top))) {
       this.frog.dead();
       return false;
     }
